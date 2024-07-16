@@ -9,7 +9,7 @@ ls -al config
 ls -al config/secrets
 
 if [ "$2" = "false" ]; then
-    mix sobelow
+    ~/.mix/escripts/sobelow $1
 else
-    mix sobelow --format sarif >> results.sarif
+    ~/.mix/escripts/sobelow $1 --format sarif >> results.sarif
 fi
