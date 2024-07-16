@@ -1,22 +1,15 @@
 #!/bin/sh -l
 
-echo "Begin sobelow.sh"
-
 mix local.hex --force
 mix escript.install hex sobelow --force
 
-echo "After mix install"
-
-ls -al ~
-ls -al ~/.mix
-ls -al ~/.mix/escripts
-
-mix escript
-
-echo "Before sobelow"
+pwd
+ls -al
+ls -al config
+ls -al config/secrets
 
 if [ "$2" = "false" ]; then
-    ~/.mix/escripts/sobelow $1
+    mix sobelow
 else
-    ~/.mix/escripts/sobelow $1 --format sarif >> results.sarif
+    mix sobelow --format sarif >> results.sarif
 fi
