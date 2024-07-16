@@ -10,4 +10,4 @@ mix escript.install hex sobelow --force
 
 # Run sobelow
 cd apps/control_room
-~/.mix/escripts/sobelow --config ../../.sobelow-conf --format sarif >> results.sarif
+~/.mix/escripts/sobelow --config ../../.sobelow-conf --format sarif >> ../../results.sarif
