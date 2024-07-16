@@ -3,11 +3,12 @@
 mix local.hex --force
 mix escript.install hex sobelow --force
 
-echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
-pwd
+ls -al ~
+ls -al ~/.mix
+ls -al ~/.mix/escripts
 
 if [ "$2" = "false" ]; then
-    .mix/escripts/sobelow $1
+    ~/.mix/escripts/sobelow $1
 else
-    .mix/escripts/sobelow $1 --format sarif >> results.sarif
+    ~/.mix/escripts/sobelow $1 --format sarif >> results.sarif
 fi
