@@ -7,6 +7,8 @@ ls -al ~
 ls -al ~/.mix
 ls -al ~/.mix/escripts
 
+mix escript
+
 if [ "$2" = "false" ]; then
     ~/.mix/escripts/sobelow $1
 else
