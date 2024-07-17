@@ -9,4 +9,4 @@ mix escript.install hex sobelow --force
 # But an empty file is not a valid sarif file. So here we check to see
 # whether the output file has any data. If not then we replace it with
 # a valid sarif file that has no results.
-[ -s results.sarif ] || cp empty.sarif results.sarif
+[ -s results.sarif ] || cp /empty.sarif results.sarif
